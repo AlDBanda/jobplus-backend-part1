@@ -7,4 +7,4 @@ router.get('/companies', auth, companyController.getAllCompanies);
 router.put('/companies/:id', auth, companyController.updateCompany);
 router.delete('/companies/:id', auth, companyController.deleteCompany);
 
-module.exports.router;
+module.exports =router;
