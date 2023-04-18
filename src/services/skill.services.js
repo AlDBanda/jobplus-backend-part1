@@ -34,7 +34,7 @@ const deleteSkill = async (id) => {
   return rows[0];
 }
 
-moduke.exports = {
+module.exports = {
   createSkill,
   getAllSkills,
   updateSkill,

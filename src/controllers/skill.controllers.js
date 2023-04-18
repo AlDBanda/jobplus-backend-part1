@@ -45,7 +45,7 @@ const deleteSkill = async (req, res) => {
 }
 
 //export all functions
-module.export = {
+module.exports = {
   createSkill,
   getAllSkills,
   updateSkill,
