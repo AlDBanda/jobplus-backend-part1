@@ -33,9 +33,9 @@ const deleteUserJobsByUserAndType = async (req, res) => {
 
 //get all user jobs for a user_id and type
 const getUserJobsByUserAndType = async (req, res) => {
-  const body = {...req.body, user_id: req.user.id};
+  const params = {...req.body, user_id: req.user.id, ...req.query};
   try {
-    const userJobs = await userJobServices.getUserJobsByUserAndType(body);
+    const userJobs = await userJobServices.getUserJobsByUserAndType(params);
     res.status(200).send(userJobs);
   } catch (error) {
     res.status(400).send(error.message);

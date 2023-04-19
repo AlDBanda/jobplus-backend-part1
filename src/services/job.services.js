@@ -1,4 +1,6 @@
 const db = require('../config/database');
+const notificationServices = require('./notification.services');
+const { jobQuery } = require('../queries/job.queries');
 
 
 //create a new job
@@ -10,8 +12,15 @@ const createJob = async (body) => {
     [title, salary_type, salary, job_types, description, company_id, sector_id, category_id]
   );
 
+  //send notification to all matching profiles
+  await notificationServices.sendNotification(rows[0]);
+
   return rows[0];
 }
+
+
+
+
 
 //get all the jobs
 const getAllJobs = async () => {
@@ -40,10 +49,37 @@ const deleteJob = async (id) => {
   return rows[0];
 }
 
+//search jobs
+const searchJobs = async (params) => {
+  const { what, where } = params;
+  const query =`
+   WHERE 
+  (
+    jobs.title iLIKE $4
+    OR companies.name iLIKE $4
+    OR jobs.id IN (
+      SELECT job_skills.job_id FROM job_skills WHERE skill_id IN (
+        SELECT id FROM skills WHERE name iLIKE $4
+        )
+      )
+  )
+  AND
+  (
+    companies.city ILIKE $5
+    OR comapnies.distict ILIKE $5
+  )
+  `
+  const rows = await jobQuery(params, query, [`%${what}%`, `%${where}%`] );
+ 
+  return rows;
+}
+
+
 //export all functions
 module.exports = {
   createJob,
   getAllJobs,
   updateJob,
-  deleteJob
+  deleteJob,
+  searchJobs,
 };

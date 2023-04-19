@@ -1,4 +1,5 @@
 const db = require ('../config/database');
+const { jobQuery } = require ('../queries/job.queries');
 
 const createUserJob = async (body) => {
   const { user_id, job_id, type } = body;
@@ -35,22 +36,17 @@ const deleteUserJobsByUserAndType = async (body) => {
 }
 
 //get all user jobs by user_id and type
-const getUserJobsByUserAndType = async (body) => {
-  const { user_id, type } = body;
-  const { rows } = await db.query (
-  `
-  SELECT * 
-  FROM jobs
-  LEFT JOIN companies ON jobs.company_id = companies.id
-  WHERE jobs.id IN (
+const getUserJobsByUserAndType = async (params) => {
+  const { type } = params;
+  const query =`
+    WHERE jobs.id IN (
     SELECT job_id
     FROM user_jobs
-    WHERE user_id = $1 AND type = $2
+    WHERE user_id = $1 AND type = $4
   )
-  `,
-[user_id, type]
-);
-  return rows [0];
+  `
+const rows = await jobQuery (params, query, [type]);
+  return rows ;
 }
 
 //return all functions
