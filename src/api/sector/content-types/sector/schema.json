@@ -4,7 +4,8 @@
   "info": {
     "singularName": "sector",
     "pluralName": "sectors",
-    "displayName": "Sector"
+    "displayName": "Sector",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,18 +16,20 @@
       "type": "string"
     },
     "smallimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "bigImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "categories": {
       "type": "relation",
