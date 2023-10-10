@@ -4,8 +4,12 @@
   "info": {
     "singularName": "sector",
     "pluralName": "sectors",
+<<<<<<< HEAD
     "displayName": "Sector",
     "description": ""
+=======
+    "displayName": "Sector"
+>>>>>>> 28ea47b6 (Category, Collections)
   },
   "options": {
     "draftAndPublish": false
@@ -16,6 +20,7 @@
       "type": "string"
     },
     "smallimage": {
+<<<<<<< HEAD
       "type": "media",
       "multiple": false,
       "required": false,
@@ -30,6 +35,20 @@
       "allowedTypes": [
         "images"
       ]
+=======
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "bigImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+>>>>>>> 28ea47b6 (Category, Collections)
     },
     "categories": {
       "type": "relation",

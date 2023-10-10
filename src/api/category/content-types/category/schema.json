@@ -4,8 +4,12 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
+<<<<<<< HEAD
     "displayName": "Category",
     "description": ""
+=======
+    "displayName": "Category"
+>>>>>>> 28ea47b6 (Category, Collections)
   },
   "options": {
     "draftAndPublish": false
@@ -20,12 +24,15 @@
       "relation": "manyToOne",
       "target": "api::sector.sector",
       "inversedBy": "categories"
+<<<<<<< HEAD
     },
     "jobs": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job.job",
       "mappedBy": "category"
+=======
+>>>>>>> 28ea47b6 (Category, Collections)
     }
   }
 }
