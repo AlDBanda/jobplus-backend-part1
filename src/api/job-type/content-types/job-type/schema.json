@@ -4,8 +4,12 @@
   "info": {
     "singularName": "job-type",
     "pluralName": "job-types",
+<<<<<<< HEAD
     "displayName": "Job Type",
     "description": ""
+=======
+    "displayName": "Job Type"
+>>>>>>> 9157ce7f ('job type collection')
   },
   "options": {
     "draftAndPublish": false
@@ -14,12 +18,15 @@
   "attributes": {
     "title": {
       "type": "string"
+<<<<<<< HEAD
     },
     "jobs": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::job.job",
       "mappedBy": "job_types"
+=======
+>>>>>>> 9157ce7f ('job type collection')
     }
   }
 }
