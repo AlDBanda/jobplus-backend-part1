@@ -19,6 +19,12 @@
       "relation": "manyToOne",
       "target": "api::sector.sector",
       "inversedBy": "categories"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job.job",
+      "mappedBy": "category"
     }
   }
 }
