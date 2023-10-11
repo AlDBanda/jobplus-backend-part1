@@ -3,6 +3,7 @@
 /**
  * job service
  */
+<<<<<<< HEAD
 module.exports = ( { strapi }) => ({
   async find(params) {
     const { start=0, limit=10, ...rest} = params;
@@ -40,3 +41,9 @@ module.exports = ( { strapi }) => ({
     }
   },
 });
+=======
+
+const { createCoreService } = require('@strapi/strapi').factories;
+
+module.exports = createCoreService('api::job.job');
+>>>>>>> 547c39f8 ('relations with Job')

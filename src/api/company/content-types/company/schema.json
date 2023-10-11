@@ -23,14 +23,20 @@
     "postcode": {
       "type": "string"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 547c39f8 ('relations with Job')
     },
     "jobs": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job.job",
       "mappedBy": "company"
+<<<<<<< HEAD
 =======
 >>>>>>> 68f0bf84 ('job collection')
+=======
+>>>>>>> 547c39f8 ('relations with Job')
     }
   }
 }

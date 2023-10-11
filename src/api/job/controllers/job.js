@@ -4,6 +4,7 @@
  * job controller
  */
 
+<<<<<<< HEAD
 module.exports = ({ strapi }) => ({
   async find(ctx) {
     try {
@@ -13,3 +14,8 @@ module.exports = ({ strapi }) => ({
     }
   },
 })
+=======
+const { createCoreController } = require('@strapi/strapi').factories;
+
+module.exports = createCoreController('api::job.job');
+>>>>>>> 547c39f8 ('relations with Job')
