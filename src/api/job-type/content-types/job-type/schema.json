@@ -4,12 +4,8 @@
   "info": {
     "singularName": "job-type",
     "pluralName": "job-types",
-<<<<<<< HEAD
     "displayName": "Job Type",
     "description": ""
-=======
-    "displayName": "Job Type"
->>>>>>> 9157ce7f ('job type collection')
   },
   "options": {
     "draftAndPublish": false
@@ -18,21 +14,14 @@
   "attributes": {
     "title": {
       "type": "string"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 547c39f8 ('relations with Job')
+
     },
     "jobs": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::job.job",
       "mappedBy": "job_types"
-<<<<<<< HEAD
-=======
->>>>>>> 9157ce7f ('job type collection')
-=======
->>>>>>> 547c39f8 ('relations with Job')
+
     }
   }
 }

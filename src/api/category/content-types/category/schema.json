@@ -4,12 +4,8 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-<<<<<<< HEAD
     "displayName": "Category",
     "description": ""
-=======
-    "displayName": "Category"
->>>>>>> 28ea47b6 (Category, Collections)
   },
   "options": {
     "draftAndPublish": false
@@ -24,21 +20,13 @@
       "relation": "manyToOne",
       "target": "api::sector.sector",
       "inversedBy": "categories"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 547c39f8 ('relations with Job')
+
     },
     "jobs": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job.job",
       "mappedBy": "category"
-<<<<<<< HEAD
-=======
->>>>>>> 28ea47b6 (Category, Collections)
-=======
->>>>>>> 547c39f8 ('relations with Job')
     }
   }
 }
