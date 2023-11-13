@@ -4,7 +4,8 @@
   "info": {
     "singularName": "job",
     "pluralName": "jobs",
-    "displayName": "Job"
+    "displayName": "Job",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -44,6 +45,17 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "jobs"
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "Nottingham",
+        "Carlisle",
+        "Gloucester",
+        "Wolverhampton",
+        "Lancaster",
+        "Cambridge"
+      ]
     }
   }
 }

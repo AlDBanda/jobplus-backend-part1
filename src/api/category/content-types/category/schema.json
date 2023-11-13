@@ -20,7 +20,6 @@
       "relation": "manyToOne",
       "target": "api::sector.sector",
       "inversedBy": "categories"
-
     },
     "jobs": {
       "type": "relation",
