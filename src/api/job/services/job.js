@@ -32,9 +32,9 @@ module.exports = ( { strapi }) => ({
       //create a set of applied IDS for effcient lookup
       const appliedJobIds = new Set(appliedJobs.map(appliedJob =>  appliedJob.job.id));
 
-      console.log(appliedJobIds);
 
-      //Add the 'hasApplied' field ro each job entry
+
+      //Add the 'hasApplied' field to each job entry
       const updatedEntries = entries.map(job => ({
         ...job,
         hasApplied: appliedJobIds.has(job.id),
@@ -51,7 +51,7 @@ module.exports = ( { strapi }) => ({
       const hasNextPage = currentPage < totalPages;
 
        return {
-        entries,
+        entries: updatedEntries,
         meta: {
           paginate: {
             totalCount,
